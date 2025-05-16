@@ -24,10 +24,8 @@ jobs:
       - name: Maven Package
         run: mvn -B clean package
       - name: Maven Verify
-run: mvn -B clean verify -DskipTests
-      - name: Archive test reports
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-                name: surefire-reports
-                path: target/surefire-reports/
+        run: mvn -B clean verify -DskipTests
+
+      - name: Print test logs
+        run: cat target/surefire-reports/*.txt
+
