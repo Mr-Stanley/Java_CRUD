@@ -20,6 +20,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: 21
+          distribution: 'temurin'
 
       - name: Maven Package
         run: mvn -B clean package

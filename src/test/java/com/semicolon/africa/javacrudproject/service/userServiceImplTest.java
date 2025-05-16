@@ -52,11 +52,11 @@ public class userServiceImplTest {
     public void testThatUserDetailsCanBeDeleted() {
         CreateUserRequest createUserRequest = new CreateUserRequest();
         createUserRequest.setEmail("Stanley081@gmail.com");
-        createUserRequest.setName("Stanleyy ugoo");
+        createUserRequest.setName("Stanley ugoo");
         userService.CreateUser(createUserRequest);
         DeleteUserDetails deleteUserDetails = new DeleteUserDetails();
         deleteUserDetails.setEmail("Stanley081@gmail.com");
-        deleteUserDetails.setName("Stanleyy ugoo");
+        deleteUserDetails.setName("Stanley ugoo");
         userService.DeleteUser(deleteUserDetails);
         assertNull(userRepository.findByEmail(deleteUserDetails.getEmail()));
     }
