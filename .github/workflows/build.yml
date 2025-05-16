@@ -28,5 +28,5 @@ jobs:
         run: mvn -B clean verify -DskipTests
 
       - name: Print test logs
-        run: cat target/surefire-reports/*.txt
+        run: cat target/surefire-reports/*.txt || echo "No test report files found"
 
